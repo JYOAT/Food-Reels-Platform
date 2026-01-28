@@ -21,11 +21,9 @@ async function createFood(req, res) {
     foodPartner: req.foodPartner._id,
   });
 
-  res
+  return res
     .status(201)
     .json({ message: "Food created successfully", food: foodItem });
-
-  res.json({ message: "Food created successfully" });
 }
 
 async function getFoodItems(req, res) {
